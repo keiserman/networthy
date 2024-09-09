@@ -1,3 +1,7 @@
+---
+import Icon from "../components/Icon.astro";
+---
+
 <div
   class="flex flex-row items-stretch gap-6 p-5 border border-zinc-200 rounded-md text-zinc-900 bg-white"
 >
@@ -17,7 +21,9 @@
         >Add to calendar</a
       >
       <div class="flex gap-2">
-        <div class="p-1 bg-zinc-100 rounded-full">A</div>
+        <div class="p-1 bg-zinc-100 rounded-full">
+          <Icon name="coffee" class="text-gray-500 w-6 h-6" strokeWidth={1.5} />
+        </div>
         <div class="p-1 bg-zinc-100 rounded-full">B</div>
       </div>
     </div>

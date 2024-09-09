@@ -1,0 +1,15 @@
+---
+import feather from "feather-icons";
+// @ts-ignore: Unreachable code error
+// Props to accept icon name and optional Tailwind classes
+const { name, class: customClass = "", strokeWidth = 2 } = Astro.props;
+
+// Generate the SVG with the provided icon name and customization options
+const icon =
+  feather.icons[name]?.toSvg({
+    class: customClass,
+    "stroke-width": strokeWidth,
+  }) || "<!-- Icon not found -->";
+---
+
+<div class="feather-icon" innerHTML={icon}></div>
