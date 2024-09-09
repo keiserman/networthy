@@ -1,5 +1,5 @@
 ---
-import Icon from "../components/Icon.astro";
+import EventIcon from "./EventIcon.astro";
 ---
 
 <div
@@ -21,10 +21,9 @@ import Icon from "../components/Icon.astro";
         >Add to calendar</a
       >
       <div class="flex gap-2">
-        <div class="p-1 bg-zinc-100 rounded-full">
-          <Icon name="coffee" class="text-gray-500 w-6 h-6" strokeWidth={1.5} />
-        </div>
-        <div class="p-1 bg-zinc-100 rounded-full">B</div>
+        <EventIcon iconName="ph:heart-bold" />
+        <EventIcon iconName="ph:share-network-bold" />
+        <EventIcon iconName="ph:dots-three-bold" />
       </div>
     </div>
   </div>

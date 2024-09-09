@@ -1,0 +1,11 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { iconName } = Astro.props;
+---
+
+<div
+  class="p-2 bg-zinc-100 rounded-full transition hover:bg-zinc-200 cursor-pointer"
+>
+  <Icon name={iconName} />
+</div>
