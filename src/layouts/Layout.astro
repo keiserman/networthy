@@ -1,10 +1,8 @@
 ---
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import "@fontsource-variable/inter";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,9 +16,14 @@ import "@fontsource-variable/inter";
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
+
 <style is:global>
   .container {
     @apply max-w-screen-xl m-auto px-6;
@@ -31,7 +34,7 @@ import "@fontsource-variable/inter";
   }
 
   .btn {
-    @apply text-sm py-2 px-3 border text-white bg-orange-600 border-orange-600 rounded;
+    @apply py-2 px-3 border text-white bg-orange-600 border-orange-600 rounded;
   }
 
   .btn.btn-outline {

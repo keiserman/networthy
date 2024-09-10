@@ -1,0 +1,17 @@
+---
+import Layout from "./Layout.astro";
+import EventTag from "../components/EventTag.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <section class="section py-20">
+    <div class="container">
+      <div class="flex gap-2 mb-2">
+        <EventTag>{frontmatter.category}</EventTag>
+      </div>
+      <h1 class="text-4xl mb-2">{frontmatter.title}</h1>
+    </div>
+  </section>
+  <slot />
+</Layout>

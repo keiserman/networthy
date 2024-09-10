@@ -1,5 +1,7 @@
 ---
 import EventIcon from "./EventIcon.astro";
+import EventTag from "./EventTag.astro";
+const { name, category, url } = Astro.props;
 ---
 
 <div
@@ -8,13 +10,9 @@ import EventIcon from "./EventIcon.astro";
   <img src="" alt="" class="w-1/4 bg-zinc-100 rounded-md" />
   <div class="flex flex-col grow">
     <div class="flex flex-row gap-2 mb-2">
-      <div
-        class="text-xs font-semibold leading-none bg-zinc-100 p-1.5 rounded-md"
-      >
-        Real Estate
-      </div>
+      <EventTag>{category}</EventTag>
     </div>
-    <div class="text-2xl font-semibold mb-1">Event Name</div>
+    <a href={url} class="text-2xl font-semibold mb-1">{name}</a>
     <div class="text-base">September 30, 2024</div>
     <div class="text-base">New York, NY</div>
     <div class="text-base font-bold mt-2">$90</div>
