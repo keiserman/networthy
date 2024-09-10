@@ -14,6 +14,8 @@ const events = await Astro.glob("./events/*.md");
             <EventCard
               name={event.frontmatter.title}
               category={event.frontmatter.category}
+              date={event.frontmatter.date}
+              location={event.frontmatter.location}
               url={event.url}
             />
           ))
